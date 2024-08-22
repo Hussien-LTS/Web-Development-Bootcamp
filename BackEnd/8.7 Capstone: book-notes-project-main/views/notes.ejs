@@ -1,0 +1,82 @@
+<%- include('partials/header.ejs') %>
+
+<div class="content-container">
+    <div>
+        <img src="assets/images/bookshelf.png" id="bookshelf-img" alt="image of books on a shelf">
+        <h1>Notepad: </h1><h2><%= data[0].title %></h2>
+        <p class="entry-text">by <%= data[0].author %></p>
+    </div>
+    <!-- ENTRY CONTAINER -->
+    <div class="log-entry-container">
+        <div>
+            <div>
+                <!-- Check for an image path for a book cover and render the image. -->
+                <% if (data[0].image_path !== null) { %> 
+                    <img src="<%= data[0].image_path %>" class="book-preview-img" alt="book cover image">
+                <% } else { %> <!-- This is rendered if there is no image path. -->
+                    <p>No book cover available</p>
+                <% } %>
+            </div>
+            <div class="entry-text"> 
+                Date: <%=data[0].date_read.toLocaleDateString('en-GB', { timeZone: 'UTC' });%> <!-- Format timestamp passed over from server. -->
+            </div>
+            <div>
+                <button class="form-button" type="button" onclick="window.location.href='/'">Return to Main Page</button>
+            </div>
+        </div>
+        
+        <!-- NOTE WRAPPER -->
+        <div class="note-wrapper">
+            <div class="add-note-form">
+                <!-- This form hits the POST route '/notes/:bookId/add' and passes over user input for a new note. -->
+                <form action="/notes/<%= data[0].book_id %>/add" method="post"> 
+                    <textarea class="review-input" name="newNote" autocomplete="off" autofocus="true"></textarea>
+                    <button class="form-button" type="submit">Add Note</button>
+                </form>
+            </div>
+            <div class="notepad">
+                <% if (data[0].note !== null) { %> <!-- If the note property of the first note object in the array is not 'null'... -->
+                    <% for (let i=0; i<data.length; i++) { %> <!-- ...iterate through the notes and render the data. -->
+                        <ul>
+                            <li>
+                                <div><!-- This form hits the POST route '/notes/:noteId/delete' and passes over an ID for the note to delete. -->
+                                    <form action="/notes/<%= data[i].id %>/delete" method="post">
+                                        <input type="hidden" name="bookId" value="<%= data[i].book_id %>">
+                                        <input type="image" id="delete<%= data[i].id %>" class="ed-icon" src="assets/images/delete-icon.png" 
+                                        onclick="return confirm('Are you sure you want to delete this note?')" alt="Delete" />
+                                    </form>
+                                    <!-- This edit button passes an id to an event handler (see below) which modifies visibility of elements. -->
+                                    <input type="image" id="edit<%= data[i].id %>" class="ed-icon" src="assets/images/edit-icon.png" 
+                                    onclick="handler('<%= data[i].id %>')" alt="Edit" />
+                                    <div id="note<%= data[i].id %>" class="entry-text"><%- data[i].note %></div> <!-- Render notes. -->
+                                </div>
+                                <div>
+                                    <!-- This form hits the POST route '/notes/:noteId/update' and passes over an ID and a note to update -->
+                                    <form action="/notes/<%= data[i].id %>/update" method="post">
+                                        <input type="hidden" name="bookId" value="<%= data[i].book_id %>">
+                                        <textarea id="input<%= data[i].id %>" class="review-input" name="noteToUpdate"
+                                        autocomplete="off" autofocus="true" hidden="true"><%- data[i].note %></textarea>
+                                        <button id="done<%= data[i].id %>" class="form-button" type="submit" hidden>Done</button>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    <% } %>
+                <% } else { %> <!-- This is rendered if there are no notes. -->
+                    <p class="entry-text">There are no notes yet.</p>
+                <% } %>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function handler(id) {
+      document.getElementById("note" + id).setAttribute("hidden", true) // This hides the note text.
+      document.getElementById("edit" + id).setAttribute("hidden", true) // This hides the edit button.
+      document.getElementById("delete" + id).setAttribute("hidden", true) // This hides the delete button.
+      document.getElementById("done" + id).removeAttribute("hidden") // This makes the done button visible.
+      document.getElementById("input" + id).removeAttribute("hidden") // This makes the text area for editing notes visible.
+    }
+</script>
