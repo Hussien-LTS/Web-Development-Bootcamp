@@ -175,11 +175,11 @@ it's possible to change the Structure of the data afterwards.
 
 ## 📁 Travel Tracker (PostgreSQL)
 
-![Simon-Game](./assets/Simon%20Game.png)
+![travel-tracker](./assets/travel-tracker.png)
 
-- repo link [Here](https://github.com/Hussien-LTS/Simon-Game)
+- repo link [Here](https://github.com/Hussien-LTS/travel-tracker)
 
-- deployed Link [Here](https://hussien-lts.github.io/Simon-Game/)
+- deployed Link [Here](https://travel-tracker-1-83yd.onrender.com)
 
 ---
 <br>
