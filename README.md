@@ -12,7 +12,7 @@ Join me on this journey as I continue to learn and master the exciting world of 
 
 ### Backend Projects
 
-<!-- -   [Mailchimp API Email Signup](https://nodejs-express-mailchimp-api-signup.onrender.com/) -->
+<!-- -   [Mailchimp API Email Signup]() -->
 - [Secrets Generator](https://secrets-project-t06a.onrender.com/)
 
 - [API Authentication](https://api-authentication-u9xk.onrender.com)
