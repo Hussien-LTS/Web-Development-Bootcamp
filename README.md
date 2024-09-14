@@ -4,7 +4,7 @@
 
 ---
 
- I've completed a 62-hour Udemy course covering a range of technologies including: **JavaScript, React.js, HTML5, CSS3, Bootstrap, Node.js, Express.js, APIs, EJS, SQL, PostgreSQL, Deployment, Authentication, and even explored Web3 and DApps.** <br>
+ I've completed a 62-hour Udemy course covering a range of technologies including **JavaScript, React.js, HTML5, CSS3, Bootstrap, Node.js, Express.js, APIs, EJS, SQL, PostgreSQL, Deployment, Authentication, and even explored Web3 and DApps.** <br>
 Join me on this journey as I continue to learn and master the exciting world of web development!  
 <br>
 
@@ -71,7 +71,7 @@ Request Vocabulary:
 
 ### Postman is a tool that allows us to test our backend without needing a frontend. We can test our routes and see what data is being sent back to us
 
-- Test different routes, while the server running with nodemon
+- Test different routes, while the server is running with nodemon
 
 ---
 <br>
@@ -79,15 +79,15 @@ Request Vocabulary:
 ## Express Middleware and Custom Middleware
 
 Middleware is a function that runs between the `request` and the `response`.
-It can be used for a variety of things, such as logging, authentication, and more.
+It can be used for various things, such as logging, authentication, and more.
 Middleware functions can be used with the `app.use()` method.
 
 ---
 <br>
 
-## 📁 Passing data in EJS
+##  Passing data in EJS
 
-- EJS work almost like having a little JavaScript module that can run JavaScript code inside a HTML file, and it ends with the .ejs file extension.
+- EJS work almost like having a little JavaScript module that can run JavaScript code inside an HTML file, and it ends with the .ejs file extension.
 
 - And essentially all we've got is just HTML but with bits of JavaScript enclosed inside a special syntax
 
@@ -95,24 +95,24 @@ Middleware functions can be used with the `app.use()` method.
 
 <br>
 
-## 📁 Formatting API requests
+##  Formatting API requests
 
 I can call it private API.
 If I want my server to talk to someone else's server and back
-(get some data, and interact with that server) - it will be also in Request and Response, but this time it's done
+(get some data, and interact with that server) - it will also be in Request and Response, but this time it's done
 via a public API.
 
 ---
 <br>
 
-## 📁 Band Generator Project (Express + ejs files)
+##  Band Generator Project (Express + ejs files)
 
 ![band-generator](./assets/band%20generator.png)
 
 ---
 <br>
 
-## 📁 JSON + Express  
+##  JSON + Express  
 
 ![13 (json, js, ejs project)](./assets/Taco%20Town.png)
 
@@ -149,12 +149,12 @@ via a public API.
 Authentication is the process of `verifying who you are (user`, to the API provider.
 Authorization is the process of verifying  what the client is allowed to do. and they get an  `API key to authorize themself`. Allows you to use an API.
 
-## 📁 Databases -
+##  Databases -
 
 ### SQL DB-
 
-Structured Query language.
-some SQL sources: oracle, MySQL, PostgreSQL, SQLite. (free and paid).
+Structured Query Language.
+some SQL sources: Oracle, MySQL, PostgreSQL, SQLite. (free and paid).
 
 ### NoSQL DB-
 
@@ -163,7 +163,7 @@ it's possible to change the Structure of the data afterwards.
 ---
 <br>
 
-## 📁 postgreSQL + pgAdmin tables
+##  postgreSQL + pgAdmin tables
 
 - to connect to the DB we need some details to verify ourselves.
 - I use the pg package to connect to the DB and send queries to the DB.
@@ -173,7 +173,7 @@ it's possible to change the Structure of the data afterwards.
 ---
 <br>
 
-## 📁 Travel Tracker (PostgreSQL)
+##  Travel Tracker (PostgreSQL)
 
 ![travel-tracker](./assets/travel-tracker.png)
 
@@ -205,7 +205,7 @@ it's possible to change the Structure of the data afterwards.
 
 - deployed Link [Here](https://hussien-lts.github.io/Drum-Kit/)
 
-## 📁 Dice Challenge - JQuery -
+##  Dice Challenge - JQuery -
 
 ![Dice](./assets/Dicee-Challenge.png)
 
@@ -213,7 +213,7 @@ it's possible to change the Structure of the data afterwards.
 
 - deployed Link [Here](https://hussien-lts.github.io/Dicee-Challenge/)
 
-## 📁 TinDog Project - HTML Only
+##  TinDog Project - HTML Only
 
 ![TinDog-Project](./assets/TinDog-Project.png)
 
@@ -221,7 +221,7 @@ it's possible to change the Structure of the data afterwards.
 
 - deployed Link [Here](https://hussien-lts.github.io/TinDog-Project)
 
-## 📁 Bootstrap Components -
+##  Bootstrap Components -
 
 ![Bootstrap-Project](./assets/Move-it.png)
 
@@ -229,7 +229,7 @@ it's possible to change the Structure of the data afterwards.
 
 - deployed Link [Here](https://hussien-lts.github.io/Basic-Bootstrap-Website/)
 
-## 📁 Mondrian Project - Grid
+##  Mondrian Project - Grid
 
 ![Mondrian-Project](./assets/Mondrian-Project.png)
 
@@ -240,11 +240,11 @@ it's possible to change the Structure of the data afterwards.
 ---
 <br>
 
-## 📁 Flex box Pricing Table Project
+##  Flex box Pricing Table Project
 
 ![Flex box](./assets/Flex-box.png)
 
-## Topics Covered 📌
+## Topics Covered 
 
 [![My Skills](https://skillicons.dev/icons?i=js,react,html,css,bootstrap,nodejs,express,jquery,mongodb,postman,postgresql)](https://skillicons.dev)
 
